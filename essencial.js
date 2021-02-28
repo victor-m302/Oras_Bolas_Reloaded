@@ -4,8 +4,8 @@ var posY = [0.5, 0.536, 0.572, 0.607, 0.643, 0.678, 0.713, 0.748, 0.783, 0.818, 
 
 //xBola
 var posX = [1.00, 1.05, 1.1, 1.149, 1.199, 1.248, 1.298, 1.347, 1.396, 1.445, 1.494, 1.543, 1.591, 1.64, 1.688, 1.736, 1.784, 1.832, 1.88, 1.928, 1.975, 2.023, 2.07, 2.117, 2.165, 2.212, 2.258, 2.305, 2.352, 2.398, 2.444, 2.49, 2.536, 2.582, 2.628, 2.674, 2.719, 2.765, 2.81, 2.855, 2.9, 2.945, 2.989, 3.034, 3.078, 3.123, 3.167, 3.211, 3.255, 3.298, 3.342, 3.385, 3.429, 3.472, 3.515, 3.558, 3.601, 3.643, 3.686, 3.728, 3.77, 3.812, 3.854, 3.896, 3.937, 3.979, 4.02, 4.061, 4.102, 4.143, 4.184, 4.225, 4.265, 4.305, 4.346, 4.386, 4.425, 4.465, 4.505, 4.544, 4.583, 4.622, 4.661, 4.7, 4.739, 4.777, 4.816, 4.854, 4.892, 4.93, 4.967, 5.005, 5.042, 5.08, 5.117, 5.154, 5.19, 5.227, 5.264, 5.3, 5.336, 5.372, 5.408, 5.444, 5.479, 5.514, 5.55, 5.585, 5.62, 5.654, 5.689, 5.723, 5.757, 5.792, 5.825, 5.859, 5.893, 5.926, 5.959, 5.992, 6.025, 6.058, 6.091, 6.123, 6.155, 6.188, 6.219, 6.251, 6.283, 6.314, 6.345, 6.376, 6.407, 6.438, 6.469, 6.499, 6.529, 6.559, 6.589, 6.619, 6.648, 6.678, 6.707, 6.736, 6.765, 6.793, 6.822, 6.85, 6.878, 6.906, 6.934, 6.962, 6.989, 7.016, 7.043, 7.07, 7.097, 7.123, 7.15, 7.176, 7.202, 7.228, 7.253, 7.279, 7.304, 7.329, 7.354, 7.379, 7.403, 7.427, 7.452, 7.476, 7.499, 7.523, 7.546, 7.57, 7.593, 7.615, 7.638, 7.66, 7.683, 7.705, 7.727, 7.748, 7.77, 7.791, 7.812, 7.833, 7.854, 7.875, 7.895, 7.915, 7.935, 7.955, 7.975, 7.994, 8.013, 8.032, 8.051, 8.07, 8.088, 8.106, 8.124, 8.142, 8.16, 8.177, 8.194, 8.211, 8.228, 8.245, 8.261, 8.278, 8.294, 8.309, 8.325, 8.34, 8.356, 8.371, 8.386, 8.4, 8.415, 8.429, 8.443, 8.457, 8.47, 8.484, 8.497, 8.51, 8.522, 8.535, 8.547, 8.559, 8.571, 8.583, 8.595, 8.606, 8.617, 8.628, 8.639, 8.649, 8.659, 8.669, 8.679, 8.689, 8.698, 8.707, 8.716, 8.725, 8.734, 8.742, 8.75, 8.758, 8.766, 8.773, 8.78, 8.787, 8.794, 8.801, 8.807, 8.813, 8.819, 8.825, 8.83, 8.836, 8.841, 8.845, 8.85, 8.854, 8.859, 8.863, 8.866, 8.87, 8.873, 8.876, 8.879, 8.882, 8.884, 8.886, 8.888, 8.89, 8.891, 8.892, 8.893, 8.894, 8.895, 8.895, 8.895, 8.895, 8.895, 8.894, 8.893, 8.892, 8.891, 8.889, 8.887, 8.885, 8.883, 8.881, 8.878, 8.875, 8.872, 8.869, 8.865, 8.861, 8.857, 8.853, 8.848, 8.843, 8.838, 8.833, 8.827, 8.822, 8.816, 8.809, 8.803, 8.796, 8.789, 8.782, 8.774, 8.767, 8.759, 8.751, 8.742, 8.734, 8.725, 8.716, 8.706, 8.696, 8.687, 8.676, 8.666, 8.655, 8.645, 8.633, 8.622, 8.61, 8.599, 8.586, 8.574, 8.561, 8.549, 8.535, 8.522, 8.508, 8.495, 8.48, 8.466, 8.451, 8.437, 8.421, 8.406, 8.39, 8.374, 8.358, 8.342, 8.325, 8.308, 8.291, 8.274, 8.256, 8.238, 8.22, 8.201, 8.183, 8.164, 8.144, 8.125, 8.105, 8.085, 8.065, 8.044, 8.023, 8.002, 7.981, 7.959, 7.938, 7.915, 7.893, 7.87, 7.847, 7.824, 7.801, 7.777, 7.753, 7.729, 7.704, 7.679, 7.654, 7.629, 7.603, 7.578, 7.551, 7.525, 7.498, 7.471, 7.444, 7.417, 7.389, 7.361, 7.333, 7.304, 7.275, 7.246, 7.217, 7.187, 7.157, 7.127, 7.096, 7.065, 7.034, 7.003, 6.971, 6.94, 6.907, 6.875, 6.842, 6.809, 6.776, 6.742, 6.708, 6.674, 6.64, 6.605, 6.57, 6.535, 6.5, 6.464, 6.428, 6.391, 6.355, 6.318, 6.28, 6.243, 6.205, 6.167, 6.128, 6.09, 6.051, 6.012, 5.972, 5.932, 5.892, 5.852, 5.811, 5.77, 5.729, 5.687, 5.645, 5.603, 5.561, 5.518, 5.475, 5.432, 5.388, 5.344, 5.3, 5.255, 5.211, 5.166, 5.12, 5.074, 5.029, 4.982, 4.936];
-var roboXArray = [];
-var roboYArray = [];
+//var roboXArray = [];
+//var roboYArray = [];
 
 
 var vel = 2.5;
@@ -97,48 +97,43 @@ class Tracer{
 
 /*Função principal*/
 function Envia() {
-  var x = document.getElementById("txtRoboX");
-  var y = document.getElementById("txtRoboY");
+  var x = parseFloat(document.getElementById("txtRoboX").value);
+  var y = parseFloat(document.getElementById("txtRoboY").value);
   var teta = 0;
   var cosseno = 0;
   var seno = 0;
-  var auxiliadora = 0;
 
   for (i = 0; i < 465; i++) {
 
-    roboXArray[0] = parseFloat(x.value);
-    roboYArray[0] = parseFloat(y.value);
+    roboX = x;
+    roboY = y;
 
-    distX = (posX[i] - roboXArray[0]);
-    distY = (posY[i] - roboYArray[0]);
+    distX = (posX[i] - roboX);
+    distY = (posY[i] - roboY);
 
 
     if (distX == 0) {
-      if (roboYArray[0] > posY[i]) {
+      if (roboY > posY[i]) {
         teta = (270 * Math.PI) / 180;
         seno = -1;
         cos = 0;
-        auxiliadora = 1;
       }
       else {
         teta = (90 * Math.PI) / 180;
         seno = 1;
         cos = 0;
-        auxiliadora = 1;
       }
     }
     else if (distY == 0) {
-      if (roboXArray[0] > posX[i]) {
+      if (roboX > posX[i]) {
         teta = (180 * Math.PI) / 180;
         seno = 0;
         cos = -1;
-        auxiliadora = 1;
       }
       else {
         teta = 0;
         seno = 0;
         cos = 1;
-        auxiliadora = 1;
       }
     }
     else {
@@ -155,13 +150,12 @@ function Envia() {
     if (d > 0.605) {
       t = ((d - 0.605) / 2.5) + 0.4;
       C = 1;
+
     }
     else {
       t = Math.sqrt((d - 0, 105) / 3, 125);
       C = 0;
     }
-    console.log("Valor do tempo do robo até a bola: ", t);
-    console.log("VALOR do TEMPO da bola até chegar no lugar: ", tempo[i]);
     if (tempo[i] < t) {
       cont++;
     }
@@ -170,7 +164,8 @@ function Envia() {
       break;
     }
 
-  }
+  }  //465 loop end
+
   var n = 0;
   var j = 0;
   var k = 0;
@@ -195,23 +190,23 @@ function Envia() {
   if (C == 0) {
     for (k = 0; k < t; k += 0.02) {
 
-      if (roboXArray[0] > posX[i]) {
-        Rx[n] = roboXArray[0] - 0.1005 - (3.125 * cosseno * (k * k));
+      if (roboX > posX[i]) {
+        Rx[n] = roboX - 0.1005 - (3.125 * cosseno * (k * k));
         RVx[n] = ((6.25 * cosseno) * k) * -1;
         RAx[n] = (6.25 * cosseno) * -1;
       }
       else {
-        Rx[n] = roboXArray[0] + 0.1005 + (3.125 * cosseno * (k * k));
+        Rx[n] = roboX + 0.1005 + (3.125 * cosseno * (k * k));
         RVx[n] = (6.25 * cosseno) * k;
         RAx[n] = 6.25 * cosseno;
       }
-      if (roboYArray[0] > posY[i]) {
-        Ry[n] = roboYArray[0] - 0.1005 - (3.125 * seno * (k * k));
+      if (roboY > posY[i]) {
+        Ry[n] = roboY - 0.1005 - (3.125 * seno * (k * k));
         RVy[n] = ((6.25 * seno) * k) * -1;
         RAy[n] = (6.25 * seno) * -1;
       }
       else {
-        Ry[n] = roboYArray[0] + 0.1005 + (3.125 * seno * (k * k));
+        Ry[n] = roboY + 0.1005 + (3.125 * seno * (k * k));
         RVy[n] = (6.25 * seno) * k;
       }
       n++;
@@ -227,23 +222,23 @@ function Envia() {
       if (C == 1) {
         for (k = 0; k < 0.4; k += 0.02) {
 
-          if (roboXArray[0] > posX[i]) {
-            Rx[n] = roboXArray[0] - 0.1005 - (3.125 * cosseno * (k * k));
+          if (roboX > posX[i]) {
+            Rx[n] = roboX - 0.1005 - (3.125 * cosseno * (k * k));
             RVx[n] = ((6.25 * cosseno) * k) * -1;
             RAx[n] = (6.25 * cosseno) * -1;
           }
           else {
-            Rx[n] = roboXArray[0] + 0.1005 + (3.125 * cosseno * (k * k));
+            Rx[n] = roboX + 0.1005 + (3.125 * cosseno * (k * k));
             RVx[n] = (6.25 * cosseno) * k;
             RAx[n] = 6.25 * cosseno;
           }
-          if (roboYArray[0] > posY[i]) {
-            Ry[n] = roboYArray[0] - 0.1005 - (3.125 * seno * (k * k));
+          if (roboY > posY[i]) {
+            Ry[n] = roboY - 0.1005 - (3.125 * seno * (k * k));
             RVy[n] = ((6.25 * seno) * k) * -1;
             RAy[n] = (6.25 * seno) * -1;
           }
           else {
-            Ry[n] = roboYArray[0] + 0.1005 + (3.125 * seno * (k * k));
+            Ry[n] = roboY + 0.1005 + (3.125 * seno * (k * k));
             RVy[n] = (6.25 * seno) * k;
           }
           n++;
@@ -251,31 +246,31 @@ function Envia() {
         }
 
       }
-      if (roboXArray[0] > posX[i]) {
+
+      if (roboX > posX[i]) {
         RVx[n] = (2.5 * cosseno) * -1;
         RAx[n] = (6.25 * cosseno) * -1;
-        Rx[n] = (roboXArray[0] - 0.1005 - ((3.125 * cosseno) * 0.16)) + RVx[n] * j;
+        Rx[n] = (roboX - 0.1005 - ((3.125 * cosseno) * 0.16)) + RVx[n] * j;
         console.log("VALOR DE Rx: ", Rx[n]);
         console.log("VALOR DE RVX: ", RVx[n - 1]);
         console.log("VALOR DE J: ", j);
-
       }
       else {
         RVx[n] = 2.5 * cosseno;
         RAx[n] = 6.25 * cosseno;
-        Rx[n] = (roboXArray[0] + 0.1005 + ((3.125 * cosseno) * 0.16)) + RVx[n] * j;
+        Rx[n] = (roboX + 0.1005 + ((3.125 * cosseno) * 0.16)) + RVx[n] * j;
 
       }
-      if (roboYArray[0] > posY[i]) {
+      if (roboY > posY[i]) {
         RVy[n] = (2.5 * seno) * -1;
         RAy[n] = (6.25 * seno) * -1;
-        Ry[n] = (roboYArray[0] - 0.1005 - ((3.125 * seno) * 0.16)) + RVy[n] * j;
+        Ry[n] = (roboY - 0.1005 - ((3.125 * seno) * 0.16)) + RVy[n] * j;
 
       }
       else {
         RVy[n] = 2.5 * seno;
         RAy[n] = 6.25 * seno;
-        Ry[n] = (roboYArray[0] + 0.1005 + ((3.125 * seno) * 0.16)) + RVy[n] * j;
+        Ry[n] = (roboY + 0.1005 + ((3.125 * seno) * 0.16)) + RVy[n] * j;
       }
       n++;
     }
@@ -286,8 +281,8 @@ function Envia() {
   /*MOVIMENTO UNIFORME + VARIADO*/
   if (C == 0) {
     for (k = 0; k < t; k += 0.02) {
-      Dt[n] = k;
-      Dp[n] = ((k * k) * 3.125 + 0.1005);
+      Dt.push(k);
+      Dp.push((k * k) * 3.125 + 0.1005);
       n++;
       C = 0;
     }
@@ -300,16 +295,16 @@ function Envia() {
     for (j = 0; j < t - 0.4; j += 0.02) {
       if (C == 1) {
         for (k = 0; k < 0.4; k += 0.02) {
-          Dt[n] = k;
-          Dp[n] = ((k * k) * 3.125 + 0.1005);
+          Dt.push(k);
+          Dp.push((k * k) * 3.125 + 0.1005);
           n++;
           C = 0;
         }
         auxiliar = k;
         k = 0;
       }
-      Dt[n] = j + auxiliar;
-      Dp[n] = (j * 2.5 + 0.6005);
+      Dt.push(j + auxiliar);
+      Dp.push(j * 2.5 + 0.6005);
       n++;
     }
     C = 1;
@@ -331,7 +326,7 @@ function Envia() {
     BAy[j] = -0.4;
   }
 
-
+  console.log(Dt);
 
   /*Grafico da posição do ROBO em X*/
   let traceRx = new Tracer('Posição X','#68228B','#68228B')
@@ -466,7 +461,6 @@ function Envia() {
   var vet = [];
   vet = [traceRR.x, traceRR.y];
   return vet;
-
 }
 
 function esconder(el) {
