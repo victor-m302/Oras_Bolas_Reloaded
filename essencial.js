@@ -77,6 +77,23 @@ class Layout {
   }
 }
 
+class Tracer{
+  constructor(name, color1, color2){
+      this.x = [0]
+      this.y = [0]
+      this.type = 'scatter'
+      this.name = name
+      this.mode =  'lines+markers'
+      this.marker = {
+        color: color1,
+        size: 8
+      }
+      this.line = {
+        color: color2,
+        width: 1
+      }
+  }
+}
 
 /*Função principal*/
 function Envia() {
@@ -317,44 +334,14 @@ function Envia() {
 
 
   /*Grafico da posição do ROBO em X*/
-  var traceRx = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Posição X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-
-  };
+  let traceRx = new Tracer('Posição X','#68228B','#68228B')
   traceRx.x = Dt;
   traceRx.y = Rx;
 
   /*Grafico da posição do ROBO em Y*/
-  var traceRy = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Posição Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
 
-  };
-
-  let layout2 = new Layout('Posição do Robô X(t) e Y(t)','X(t) e Y(t)')
+  let layout2 = new Layout('Posição do Robô xxX(t) e Y(t)','X(t) e Y(t)')
+  let traceRy = new Tracer('Posição Y','#8B1A1A','#8B1A1A')
   traceRy.x = Dt;
   traceRy.y = Ry;
   var data = [traceRx, traceRy];
@@ -364,42 +351,12 @@ function Envia() {
 
 
   /*Grafico da Velocidade do ROBO em X*/
-  var traceRVx = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Velocidade X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-
-  };
+  let traceRVx=new Tracer('Velocidade X','#68228B','#68228B')
   traceRVx.x = Dt;
   traceRVx.y = RVx;
 
   /*Grafico da Velocidade do ROBO em Y*/
-  var traceRVy = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Velocidade Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-
-  };
+  let traceRVy=new Tracer('Velocidade Y','#8B1A1A','#8B1A1A')  
   let layout3 = new Layout('Velocidade do Robô Vx(t) e Vy(t)','Vx(t) e Vy(t)')
   traceRVy.x = Dt;
   traceRVy.y = RVy;
@@ -408,66 +365,21 @@ function Envia() {
 
 
   /*Grafico da Aceleração do ROBO em X*/
-  var traceRAx = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Aceleração X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-  };
+  let traceRAx=new Tracer('Aceleração X','#68228B','#68228B')  
   traceRAx.x = Dt;
   traceRAx.y = RAx;
 
   /*Grafico da Aceleração do ROBO em Y*/
-  var traceRAy = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Aceleração Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-
-  };
   let layout4 = new Layout('Aceleração do Robô Ax(t) e Ay(t)','Ax(t) e Ay(t)')
+  let traceRAy=new Tracer('Aceleração Y','#8B1A1A','#8B1A1A')  
   traceRAy.x = Dt;
   traceRAy.y = RAy;
   var data = [traceRAx, traceRAy];
   Plotly.newPlot('myDiv8', data, layout4);
 
   /*Gráfico da Distância*/
-  var traceD = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Distância',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-
-  };
-
   let layout5 = new Layout('Distância do Robô até a Bola','Posição(d)')
+  let traceD=new Tracer('Distância','#68228B','#68228B')
   traceD.x = Dt;
   traceD.y = Dp;
   var data = [traceD];
@@ -475,69 +387,22 @@ function Envia() {
 
   /*Gráfico da trajetória da Bola*/
 
-  var traceTB = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Interceptação(Bola)',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-
-  };
-
+  let traceTB = new Tracer('Interceptação(Bola)','#8B1A1A','#8B1A1A')
   traceTB.x = Bx;
   traceTB.y = By;
   var data = [traceTB];
 
 
-  var traceTB2 = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Total',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-  };
-
-  let layout6 = new Layout('Trajetória da Bola Y(x)','Posição Y(x)')
+    let layout6 = new Layout('Trajetória da Bola Y(x)','Posição Y(x)')
+  let traceTB2 = new Tracer('Total','#68228B','#68228B')  
   traceTB2.x = posX;
   traceTB2.y = posY;
   var data = [traceTB];
   Plotly.newPlot('myDiv3', data, layout6);
 
   /*Grafico da TRAJETÓRIA DO ROBO*/
-  var traceRR = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Interceptação(Robô)',
-    mode: 'lines+markers',
-    marker: {
-      color: '#006400',
-      size: 8
-    },
-    line: {
-      color: '#006400',
-      width: 1
-    }
-
-  };
-
   let layout7 = new Layout('Trajetória do Robô','Posição Y')
+  let traceRR = new Tracer('Interceptação(Robô)','#006400','#006400')
   traceRR.x = Rx;
   traceRR.y = Ry;
 
@@ -555,134 +420,42 @@ function Envia() {
 
   /*Posição da bola em X*/
 
-
-  var traceTBX = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Posição X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-  };
+  let traceTBX = new Tracer('Posição X', '#68228B', '#68228B')
   traceTBX.x = Bt;
   traceTBX.y = posX;
 
 
   /*Posição - Bola(y)*/
-
-  var traceTBY = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Posição Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-  };
   let layout9 = new Layout('Posição da Bola X(t) e Y(t)','X(t) e Y(t)')
+  let traceTBY = new Tracer('Posição Y','#8B1A1A','#8B1A1A')
   traceTBY.x = Bt;
   traceTBY.y = posY;
   var data = [traceTBX, traceTBY];
   Plotly.newPlot('myDiv5', data, layout9);
 
   /*Velocidade da Bola X(t)*/
-
-  var traceTBVX = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Velocidade X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-  };
+  let traceTBVX = new Tracer('Velocidade X','#68228B','#68228B')
   traceTBVX.x = Bt;
   traceTBVX.y = BVx;
 
 
   /*Velocidade da bola Y(t)*/
-
-  var traceTBVY = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Velocidade Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-  };
-
   let layout10 = new Layout('Velocidade da Bola Vx(t) e Vy(t)','Vx(t) e Vy(t)')
+  let traceTBVY = new Tracer('Velocidade Y','#8B1A1A','#8B1A1A')
   traceTBVY.x = Bt;
   traceTBVY.y = BVy;
   var data = [traceTBVX, traceTBVY];
   Plotly.newPlot('myDiv7', data, layout10);
 
-
   /*Aceleração da bola em X(t)*/
-
-  var traceTBAX = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Aceleração X',
-    mode: 'lines+markers',
-    marker: {
-      color: '#68228B',
-      size: 8
-    },
-    line: {
-      color: '#68228B',
-      width: 1
-    }
-  };
+  let traceTBAX = new Tracer('Aceleração X','#68228B','#68228B')
   traceTBAX.x = Bt;
   traceTBAX.y = BAx;
 
 
   /*Aceleração em Y(t)*/
+  let traceTBAY = new Tracer('Aceleração Y','#8B1A1A','#8B1A1A')
 
-
-  var traceTBAY = {
-    x: [0],
-    y: [0],
-    type: 'scatter',
-    name: 'Aceleração Y',
-    mode: 'lines+markers',
-    marker: {
-      color: '#8B1A1A',
-      size: 8
-    },
-    line: {
-      color: '#8B1A1A',
-      width: 1
-    }
-  };
   let layout11 = new Layout('Aceleração da Bola Ax(t) Ay(t)','Ax(t) e Ay(t)')
   traceTBAY.x = Bt;
   traceTBAY.y = BAy;
