@@ -466,70 +466,12 @@ function Envia() {
     }
 
   };
-  var layout = {
-    title: 'Distância do Robô até a Bola',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
 
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Tempo(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição(d)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-  }
-
+  let layout5 = new Layout('Distância do Robô até a Bola','Posição(d)')
   traceD.x = Dt;
   traceD.y = Dp;
   var data = [traceD];
-  Plotly.newPlot('myDiv1', data, layout);
+  Plotly.newPlot('myDiv1', data, layout5);
 
   /*Gráfico da trajetória da Bola*/
 
@@ -570,72 +512,12 @@ function Envia() {
       width: 1
     }
   };
-  var layout = {
-    title: 'Trajetória da Bola Y(x)',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
 
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-
-      title: 'Posição(x)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição Y(x)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    }
-  };
+  let layout6 = new Layout('Trajetória da Bola Y(x)','Posição Y(x)')
   traceTB2.x = posX;
   traceTB2.y = posY;
   var data = [traceTB];
-  Plotly.newPlot('myDiv3', data, layout);
+  Plotly.newPlot('myDiv3', data, layout6);
 
   /*Grafico da TRAJETÓRIA DO ROBO*/
   var traceRR = {
@@ -654,136 +536,21 @@ function Envia() {
     }
 
   };
-  var layout = {
-    title: 'Trajetória do Robô',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
 
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição X',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição Y',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-  }
-
+  let layout7 = new Layout('Trajetória do Robô','Posição Y')
   traceRR.x = Rx;
   traceRR.y = Ry;
 
   console.log(traceRR.x);
   console.log(traceRR.y);
   var data = [traceRR];
-  Plotly.newPlot('myDiv2', data, layout);
+  Plotly.newPlot('myDiv2', data, layout7);
+
 
   /*TRAJETÓRIA INTERCEPTAÇÃO*/
-  var layout = {
-    title: 'Trajetória da Interceptação',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
-
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição X',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Posição Y',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-  }
+  let layout8 = new Layout('Trajetória da Interceptação','Posição Y')
   var data = [traceTB2, traceTB, traceRR];
-  Plotly.newPlot('myDiv10', data, layout);
+  Plotly.newPlot('myDiv10', data, layout8);
 
 
   /*Posição da bola em X*/
@@ -825,76 +592,11 @@ function Envia() {
       width: 1
     }
   };
-  var layout = {
-    title: 'Posição da Bola X(t) e Y(t)',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
-
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-
-      title: 'Tempo(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-
-
-      title: 'X(t) e Y(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    }
-  };
+  let layout9 = new Layout('Posição da Bola X(t) e Y(t)','X(t) e Y(t)')
   traceTBY.x = Bt;
   traceTBY.y = posY;
   var data = [traceTBX, traceTBY];
-  Plotly.newPlot('myDiv5', data, layout);
+  Plotly.newPlot('myDiv5', data, layout9);
 
   /*Velocidade da Bola X(t)*/
 
@@ -934,72 +636,12 @@ function Envia() {
       width: 1
     }
   };
-  var layout = {
-    title: 'Velocidade da Bola Vx(t) e Vy(t)',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
 
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-
-      title: 'Tempo(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-      title: 'Vx(t) e Vy(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    }
-  };
+  let layout10 = new Layout('Velocidade da Bola Vx(t) e Vy(t)','Vx(t) e Vy(t)')
   traceTBVY.x = Bt;
   traceTBVY.y = BVy;
   var data = [traceTBVX, traceTBVY];
-  Plotly.newPlot('myDiv7', data, layout);
+  Plotly.newPlot('myDiv7', data, layout10);
 
 
   /*Aceleração da bola em X(t)*/
@@ -1041,74 +683,11 @@ function Envia() {
       width: 1
     }
   };
-  var layout = {
-    title: 'Aceleração da Bola Ax(t) Ay(t)',
-    plot_bgcolor: "rgba(0,191,255,0.1)",
-    paper_bgcolor: "rgba(0,191,255,0.1)",
-    titlefont: {
-      size: 25,
-      color: '#2E2E2E'
-    },
-
-    xaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-
-      title: 'Tempo(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    },
-
-    yaxis: {
-      showgrid: true,
-      zeroline: true,
-      mirror: 'ticks',
-      gridcolor: '#2E2E2E',
-      gridwidth: 2,
-      zerolinecolor: 'black',
-      zerolinewidth: 4,
-
-
-      title: 'Ax(t) e Ay(t)',
-      titlefont: {
-        family: 'Segoe UI, sans-serif',
-        size: 20,
-        color: '#2E2E2E'
-      },
-      showticklabels: true,
-      tickangle: 'auto',
-      tickfont: {
-        family: 'Segoe UI, serif',
-        size: 15,
-        color: '#2E2E2E'
-      },
-      exponentformat: 'e',
-      showexponent: 'all'
-    }
-  };
+  let layout11 = new Layout('Aceleração da Bola Ax(t) Ay(t)','Ax(t) e Ay(t)')
   traceTBAY.x = Bt;
   traceTBAY.y = BAy;
   var data = [traceTBAX, traceTBAY];
-  Plotly.newPlot('myDiv9', data, layout);
+  Plotly.newPlot('myDiv9', data, layout11);
 
 
   var vet = [];
