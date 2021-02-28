@@ -340,8 +340,8 @@ function Envia() {
 
   /*Grafico da posição do ROBO em Y*/
 
-  let layout2 = new Layout('Posição do Robô xxX(t) e Y(t)','X(t) e Y(t)')
   let traceRy = new Tracer('Posição Y','#8B1A1A','#8B1A1A')
+  let layout2 = new Layout('Posição do Robô xxX(t) e Y(t)','X(t) e Y(t)')
   traceRy.x = Dt;
   traceRy.y = Ry;
   var data = [traceRx, traceRy];
