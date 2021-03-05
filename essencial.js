@@ -5,7 +5,8 @@ let posX = [1.00, 1.05, 1.1, 1.149, 1.199, 1.248, 1.298, 1.347, 1.396, 1.445, 1.
 //yBola
 let posY = [0.5, 0.536, 0.572, 0.607, 0.643, 0.678, 0.713, 0.748, 0.783, 0.818, 0.852, 0.886, 0.92, 0.954, 0.988, 1.022, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.253, 1.286, 1.318, 1.35, 1.382, 1.414, 1.445, 1.477, 1.508, 1.539, 1.57, 1.601, 1.632, 1.662, 1.692, 1.722, 1.752, 1.782, 1.812, 1.842, 1.871, 1.9, 1.929, 1.958, 1.987, 2.015, 2.044, 2.072, 2.1, 2.128, 2.156, 2.183, 2.211, 2.238, 2.265, 2.292, 2.319, 2.346, 2.372, 2.398, 2.424, 2.45, 2.476, 2.502, 2.528, 2.553, 2.578, 2.603, 2.628, 2.653, 2.677, 2.702, 2.726, 2.75, 2.774, 2.798, 2.821, 2.845, 2.868, 2.891, 2.914, 2.937, 2.96, 2.982, 3.004, 3.026, 3.048, 3.07, 3.092, 3.114, 3.135, 3.156, 3.177, 3.198, 3.219, 3.239, 3.26, 3.28, 3.3, 3.32, 3.34, 3.359, 3.379, 3.398, 3.417, 3.436, 3.455, 3.474, 3.492, 3.51, 3.528, 3.546, 3.564, 3.582, 3.6, 3.617, 3.634, 3.651, 3.668, 3.685, 3.701, 3.718, 3.734, 3.75, 3.766, 3.782, 3.797, 3.813, 3.828, 3.843, 3.858, 3.873, 3.888, 3.902, 3.916, 3.93, 3.944, 3.958, 3.972, 3.986, 3.999, 4.012, 4.025, 4.038, 4.051, 4.063, 4.076, 4.088, 4.1, 4.112, 4.124, 4.135, 4.147, 4.158, 4.169, 4.18, 4.191, 4.202, 4.212, 4.222, 4.232, 4.242, 4.252, 4.262, 4.272, 4.281, 4.29, 4.299, 4.308, 4.317, 4.325, 4.334, 4.342, 4.35, 4.358, 4.366, 4.373, 4.381, 4.388, 4.395, 4.402, 4.409, 4.416, 4.422, 4.428, 4.434, 4.44, 4.446, 4.452, 4.458, 4.463, 4.468, 4.473, 4.478, 4.483, 4.487, 4.492, 4.496, 4.5, 4.504, 4.508, 4.511, 4.515, 4.518, 4.521, 4.524, 4.527, 4.53, 4.532, 4.534, 4.536, 4.538, 4.54, 4.542, 4.544, 4.545, 4.546, 4.547, 4.548, 4.549, 4.549, 4.55, 4.55, 4.55, 4.55, 4.55, 4.549, 4.549, 4.548, 4.547, 4.546, 4.545, 4.544, 4.542, 4.54, 4.538, 4.536, 4.534, 4.532, 4.53, 4.527, 4.524, 4.521, 4.518, 4.515, 4.511, 4.508, 4.504, 4.5, 4.496, 4.492, 4.487, 4.483, 4.478, 4.473, 4.468, 4.463, 4.458, 4.452, 4.446, 4.44, 4.434, 4.428, 4.422, 4.416, 4.409, 4.402, 4.395, 4.388, 4.381, 4.373, 4.366, 4.358, 4.35, 4.342, 4.334, 4.325, 4.317, 4.308, 4.299, 4.29, 4.281, 4.272, 4.262, 4.252, 4.242, 4.232, 4.222, 4.212, 4.202, 4.191, 4.18, 4.169, 4.158, 4.147, 4.135, 4.124, 4.112, 4.1, 4.088, 4.076, 4.063, 4.051, 4.038, 4.025, 4.012, 3.999, 3.986, 3.972, 3.958, 3.944, 3.93, 3.916, 3.902, 3.888, 3.873, 3.858, 3.843, 3.828, 3.813, 3.797, 3.782, 3.766, 3.75, 3.734, 3.718, 3.701, 3.685, 3.668, 3.651, 3.634, 3.617, 3.6, 3.582, 3.564, 3.546, 3.528, 3.51, 3.492, 3.474, 3.455, 3.436, 3.417, 3.398, 3.379, 3.359, 3.34, 3.32, 3.3, 3.28, 3.26, 3.239, 3.219, 3.198, 3.177, 3.156, 3.135, 3.114, 3.092, 3.07, 3.048, 3.026, 3.004, 2.982, 2.96, 2.937, 2.914, 2.891, 2.868, 2.845, 2.821, 2.798, 2.774, 2.75, 2.726, 2.702, 2.677, 2.653, 2.628, 2.603, 2.578, 2.553, 2.528, 2.502, 2.476, 2.45, 2.424, 2.398, 2.372, 2.346, 2.319, 2.292, 2.265, 2.238, 2.211, 2.183, 2.156, 2.128, 2.1, 2.072, 2.044, 2.015, 1.987, 1.958, 1.929, 1.9, 1.871, 1.842, 1.812, 1.782, 1.752, 1.722, 1.692, 1.662, 1.632, 1.601, 1.57, 1.539, 1.508, 1.477, 1.445, 1.414, 1.382, 1.35, 1.318, 1.286, 1.253, 1.221, 1.188, 1.155, 1.122, 1.089, 1.056, 1.022, 0.988, 0.954, 0.92, 0.886, 0.852, 0.818, 0.783, 0.748, 0.713, 0.678, 0.643, 0.607, 0.572, 0.536, 0.5, 0.464, 0.428, 0.391, 0.355, 0.318, 0.281, 0.244, 0.207, 0.17, 0.132, 0.094, 0.056, 0.018];
 
-
+let PosXRobo = []
+let PosYRobo = []
 
 class Ponto{
   constructor(x,y){
@@ -25,7 +26,7 @@ class Trangulo{
     this.pontoRobo = new Ponto(roboX,roboY)
     this.pontoBola = new Ponto(bolaX,bolaY)
     this.pontoTemp = new Ponto(0,0)
-    this.a,this.b,this.c,this.a2,this.b2,this.c2,this.alpha,this.betta,this.gamma;
+    this.a,this.b,this.c,this.BC,this.AC,this.AB,this.alpha,this.betta,this.gamma;
     this.analisar()
     this.calcular3angulos(this.pontoRobo, this.pontoBola, this.pontoTemp)
 
@@ -55,22 +56,22 @@ lengthSquare = (pontoM, pontoN) => {
     return Math.pow(pontoM.x- pontoN.x,2) + Math.pow(pontoM.y - pontoN.y,2)
 } 
   calcular3angulos = (A, B, C) => {
-    // Square of lengths be a2, b2, c2  
-    this.a2 = this.lengthSquare(B, C)  
-    this.b2 = this.lengthSquare(A, C)  
-    this.c2 = this.lengthSquare(A, B)  
+    // Square of lengths be BC, AC, AB  
+    this.BC = this.lengthSquare(B, C)  
+    this.AC = this.lengthSquare(A, C)  
+    this.AB = this.lengthSquare(A, B)  
 
     // length of sides be a, b, c  
-    this.a = Math.sqrt(this.a2);  
-    this.b = Math.sqrt(this.b2);  
-    this.c = Math.sqrt(this.c2);  
+    this.a = Math.sqrt(this.BC);  
+    this.b = Math.sqrt(this.AC);  
+    this.c = Math.sqrt(this.AB);  
 
     // From Cosine law  
-    this.alpha = Math.acos((this.b2 + this.c2 - this.a2) /
+    this.alpha = Math.acos((this.AC + this.AB - this.BC) /
                          (2 * this.b * this.c));  
-    this.betta = Math.acos((this.a2 + this.c2 - this.b2) / 
+    this.betta = Math.acos((this.BC + this.AB - this.AC) / 
                          (2 * this.a * this.c));  
-    this.gamma = Math.acos((this.a2 + this.b2 - this.c2) / 
+    this.gamma = Math.acos((this.BC + this.AC - this.AB) / 
                          (2 * this.a * this.b));  
 
     // Converting to degree  
@@ -81,9 +82,11 @@ lengthSquare = (pontoM, pontoN) => {
     console.log("alpha : "+this.alpha)  
     console.log("betta : "+this.betta) 
     console.log("gamma : "+this.gamma) 
+    return this.alpha
   }
   
 }
+
 
 class Robo{
   constructor(x,y){
@@ -94,6 +97,13 @@ class Robo{
     this.aceleracao = 6.25
     this.velocidadeMUV = 6.25 //6,25*t  //durante 0.4segundos
     this.velocidadeMU = 2.5//constante
+    this.trianguloGenerico;
+  }
+  velocidadeMaxMUVx = (ang,t) => { //  Vxmax = Vmax * cosΘ
+    return (this.velocidadeMUx(ang) / 0.4 )* t
+  }
+  velocidadeMaxMUVy = (ang,t) => {//  Vymax = Vmax * senΘ
+    return (this.velocidadeMUy(ang) / 0.4 )* t
   }
   //Velocidade máxima(MU) no ponto X e Y:
   velocidadeMaxMUx = (ang) => { //  Vxmax = Vmax * cosΘ
@@ -102,29 +112,19 @@ class Robo{
   velocidadeMaxMUy = (ang) => {//  Vymax = Vmax * senΘ
     return this.velocidadeMU  * Math.sin(ang)
   }
-  velocidadeMaxMUVx = (ang,t) => { //  Vxmax = Vmax * cosΘ
-    return (this.velocidadeMUx(ang) / 0.4 )* t
-  }
-  velocidadeMaxMUVy = (ang,t) => {//  Vymax = Vmax * senΘ
-    return (this.velocidadeMUy(ang) / 0.4 )* t
-  }
-/*
+
   update(){
+
+    PosXRobo = []
+    PosYRobo = []
+    PosXRobo.push( )
     if(t>=0.4){ //muv
-      this.x += 
-      this.x += 
+      this.x += this.velocidadeMaxMUVx(ang,t)
+      this.y += this.velocidadeMaxMUVy(ang,t)
     }
     else{
-      this.x += 
-      this.x += 
-    }
-*/
-    //ΔX = Xbola - Xrobo
-    //ΔY = Xbola - Xrobo
-    //dist = sqrt(pow((ΔX),2)+pow((ΔY),2))
-    //D = √(ΔX)² + (ΔY)²
-    coefAng = (By,Ay,Bx,Ax) => {
-      return (By - Ay) / (Bx - Ax)
+      this.x += velocidadeMaxMUx (ang)
+      this.y += velocidadeMaxMUy (ang)
     }
   }
 
@@ -175,60 +175,22 @@ class Bola{
 }
 
 class Intersection {
-  //console.log(inicialDBolaRobo(posX[0],posY[0],roboX[0],roboY[0]))
-  inicialDBolaRobo(sXBola,sYBola, sXRobo, sYRobo){
-    let dist=0
-    let variable=0; 
-      variable = Math.pow((sXBola-sXRobo),2) + Math.pow((sYBola-sYRobo),2) 
-      dist = Math.sqrt(variable)
-    return dist
+  constructor(){
+    this.trianguloGenerico = new Trangulo(this.x, this.y, 2, 5) 
   }
-  distanciaBolaRobo(SXBola,SYBola, SXRobo, SYRobo){
-    let dist=[]
-    let variable;
-    for(let i=0;i<465;i++){
-      variable = Math.pow((SXBola[i]-SXRobo[i]),2) + Math.pow((SYBola[i]-SYRobo[i]),2) 
-      dist[i] = Math.sqrt(variable)
-    }
-    return dist
-    
-  }
+  PosXRobo.push()
+
 }
 
-let posX=[1.00, 1.05, 1.1, 1.149, 1.199]
-let posY=[0.5, 0.536, 0.572, 0.607, 0.643]
-let tempo=[0, 0.02, 0.04, 0.06, 0.08, 0.1]
-let roboX = [0,0,0,0,0]
-let roboY = [0,0,0,0,0]
+function Envia(){
+  let x = parseFloat(document.getElementById("txtRoboX").value)
+  let y = parseFloat(document.getElementById("txtRoboY").value)
+  PosXRobo.push(x)
+  PosYRobo.push(y)
+  let robot = new Robo(x,y)
+  let ball = new Bola()
 
-let robot = new Robo(0,0)
-let ball = new Bola()
-let encounter = new Intersection()
-
-
-
-//coeficiente angular
-/*
-let A=  {
-  x: -1 ,
-  y: 3
+  let encounter = new Intersection()
 }
-let B = {
-  x: -2 ,
-  y: 4
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
