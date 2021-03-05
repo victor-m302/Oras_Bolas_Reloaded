@@ -7,7 +7,6 @@ let posY = [0.5, 0.536, 0.572, 0.607, 0.643, 0.678, 0.713, 0.748, 0.783, 0.818, 
 
 let PosXRobo = []
 let PosYRobo = []
-
 class Ponto{
   constructor(x,y){
     this.x = x
@@ -26,9 +25,9 @@ class Trangulo{
     this.pontoRobo = new Ponto(roboX,roboY)
     this.pontoBola = new Ponto(bolaX,bolaY)
     this.pontoTemp = new Ponto(0,0)
-    this.a,this.b,this.c,this.BC,this.AC,this.AB,this.alpha,this.betta,this.gamma;
+    this.a,this.b,this.c,this.BC,this.AC,this.AB,this.alpha,this.betta,this.gamma,this.quadrante,this.anguloFinal;
     this.analisar()
-    this.calcular3angulos(this.pontoRobo, this.pontoBola, this.pontoTemp)
+    this.anguloFinal = this.calcular3angulos(this.pontoRobo, this.pontoBola, this.pontoTemp)
 
   }
 
@@ -39,13 +38,29 @@ class Trangulo{
 
   analisar = () =>{
   //analisa 2 pontos do triangulo e retorna o 3o
-    if((this.pontoRobo.x < this.pontoBola.x && this.pontoRobo.y < this.pontoBola.y) ||
-    (this.pontoRobo.x > this.pontoBola.x && this.pontoRobo.y < this.pontoBola.y)){
-    this.setPontoTemp(this.pontoBola.x,this.pontoRobo.y)
+    if(this.pontoRobo.x < this.pontoBola.x && this.pontoRobo.y < this.pontoBola.y) { //robo.x < bola.x && robo.y < bola.y
+        this.setPontoTemp(this.pontoBola.x,this.pontoRobo.y)
+        this.quadrante = 90
+        console.log("1o quadrante"+",pontoC: ")
     }
 
-    else if((this.pontoRobo.x < this.pontoBola.x && this.pontoRobo.y > this.pontoBola.y) || (this.pontoRobo.x > this.pontoBola.x && this.pontoRobo.y > this.pontoBola.y)){
+    else if(this.pontoRobo.x > this.pontoBola.x && this.pontoRobo.y < this.pontoBola.y){ //robo.x > bola.x && robo.y < bola.y
+        this.setPontoTemp(this.pontoBola.x,this.pontoRobo.y)
+        this.quadrante = 0
+        console.log("2o quadrante"+",pontoC: ")
+    }
+
+    else if(this.pontoRobo.x < this.pontoBola.x && this.pontoRobo.y > this.pontoBola.y){  //robo.x < bola.x && robo.y > bola.y
         this.setPontoTemp(this.pontoRobo.x,this.pontoBola.y)
+        this.quadrante = 180
+        console.log("4o quadrante"+",pontoC: ")
+    } 
+    
+    else if(this.pontoRobo.x > this.pontoBola.x && this.pontoRobo.y > this.pontoBola.y){  //robo.x > bola.x && robo.y > bola.y
+        this.setPontoTemp(this.pontoRobo.x,this.pontoBola.y)
+        this.quadrante = 270
+        console.log("3o quadrante"+",pontoC: ")
+
     }
     else{
       console.log("??")
@@ -79,14 +94,13 @@ lengthSquare = (pontoM, pontoN) => {
     this.betta = this.betta * 180 / Math.PI;  
     this.gamma = this.gamma * 180 / Math.PI;  
     // printing all the angles  
-    console.log("alpha : "+this.alpha)  
-    console.log("betta : "+this.betta) 
-    console.log("gamma : "+this.gamma) 
-    return this.alpha
+    //console.log("alpha : "+this.alpha)  
+    //console.log("betta : "+this.betta) 
+    //console.log("gamma : "+this.gamma) 
+    return this.alpha + this.quadrante
   }
   
 }
-
 
 class Robo{
   constructor(x,y){
@@ -97,7 +111,6 @@ class Robo{
     this.aceleracao = 6.25
     this.velocidadeMUV = 6.25 //6,25*t  //durante 0.4segundos
     this.velocidadeMU = 2.5//constante
-    this.trianguloGenerico;
   }
   velocidadeMaxMUVx = (ang,t) => { //  Vxmax = Vmax * cosΘ
     return (this.velocidadeMUx(ang) / 0.4 )* t
@@ -175,9 +188,18 @@ class Bola{
 }
 
 class Intersection {
-  constructor(){
-    this.trianguloGenerico = new Trangulo(this.x, this.y, 2, 5) 
+  constructor(robo,bola){
+    let trianguloGenerico = new Trangulo(robo.x, robo.y, bola.x, bola.y) //alpha 225
+    console.log(trianguloGenerico.pontoTemp)
+    console.log(trianguloGenerico.anguloFinal)
+    this.tempo=0
   }
+
+  estimarTempo = () => {
+
+  }
+
+
   PosXRobo.push()
 
 }
@@ -189,8 +211,7 @@ function Envia(){
   PosYRobo.push(y)
   let robot = new Robo(x,y)
   let ball = new Bola()
-
-  let encounter = new Intersection()
+  let encounter = new Intersection(robot,ball)
 }
 
 
